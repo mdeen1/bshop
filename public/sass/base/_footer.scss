@@ -1,0 +1,230 @@
+.footer{
+	padding: 10rem 4rem 8rem 4rem;
+	background-color: $color-black;
+
+
+	.footer__links-mobile{
+		display: none;
+	}
+	.newsletter--heading{ 
+		text-align: center;
+		color: $color-white;
+		font-size: 3rem; 
+		margin-bottom: 3rem; 
+	}
+	.newsletter{
+		color: $color-white;
+		text-align: center;
+		position: relative; 
+		margin: 0 auto;
+		margin-bottom: 8rem; 
+		width: 50%;
+
+		input{
+			padding: 1rem 0 1rem 3.5rem;
+			background-image: url(images/basic/letter.png);
+			background-position: 7px;
+			background-size: 2rem;
+			background-repeat: no-repeat;
+			border: none; outline: none;
+			margin: 0;
+			display: inline; 
+			margin-right: -3px;
+			line-height: 2rem;
+			width: 100%; 
+		}
+		.btn--newsletter{
+			position: absolute;
+			top: 0; right: -1rem; 
+			display: inline-block;
+			background-color: $color-white;
+			padding: 1rem 1.5rem;
+			color: $color-black;
+			font-weight: 700;
+			line-height: 2rem; 
+
+			transition: all .3s;
+
+			&:hover{
+				background-color: $color-primary;
+			}
+		}
+	}
+
+	.footer__links{
+		.cols{
+			a{ 
+				color: #9E9E9E;
+				font-size: 1.4rem;  
+				font-weight: 200;
+				transition: color .3s;
+
+				&:hover{
+					color: $color-white;
+				}
+			}
+			.col-2{
+				li+li{
+					margin-top: 2rem; 
+				}
+			}
+			.footer-style{
+				
+				ul{
+					margin-top: 5rem; 
+					li{	
+						list-style-type: none;
+						color: #9E9E9E;
+						font-size: 1.4rem;
+						padding-right: 5rem;  
+
+						svg{ 
+							margin-right: 1.5rem;  
+							color: $color-white;
+						}
+						.link{
+							color: $color-primary;
+							transition: color .3s;
+							&:hover{
+								color: $color-white;
+							}
+						}
+					}
+					li+li{
+						margin-top: 2rem; 
+					}
+				}
+
+				#socials{
+					li{
+						display: inline;
+						margin: 0;
+						padding: 0;
+
+						svg{ 
+							color: #9E9E9E;
+							font-size: 1.8rem;  
+							transition: color .3s;
+							&:hover{
+								color: $color-white;
+							}
+						}
+
+					}
+					li+li{ margin-left: 5px;  }
+				}
+
+
+				.col--heading{
+					color: $color-white;
+					font-weight: 500;
+					font-size: 1.6rem; 
+					transition: color .3s;
+					
+					&:hover{
+						color: $color-primary;
+					} 
+				}
+			}
+		}
+	}
+}
+
+/*Media Query for Tablet*/
+@media(max-width: 920px){
+	.footer{
+		font-size: 110%; 
+		.footer__links{
+			.col-3.footer-style,
+			.col-2.footer-style{
+				flex: 0 0 50%;
+				max-width: 50%;
+				margin-top: 50px; 
+				padding: 0 5%;
+			}
+			.col-3.footer-style{
+				padding-left: 15%;  
+			}
+			.col-2.footer-style{
+				text-align: left;
+			}
+			.col-1{
+				display: none;
+			}
+			.col-2{
+				flex: 0 0 33.33%;
+				max-width: 33.33%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/*Tablet Universal*/
+@media(max-width: 767px){
+	.footer{
+		padding: 4rem 10rem 4rem 10rem;
+		overflow: hidden;
+		
+		.newsletter{
+			width: 100%;
+			margin-bottom: 3rem; 
+		}
+		/*Hiding Desktop Menu*/
+		.footer__links{
+			display: none;
+		}
+		/*Mobile Menu*/
+		.footer__links-mobile{
+			display: block;
+			a{ color: #fff; }
+			/*Wrapper for all Dropdown Links*/
+			.footer-mobile-module{
+				width: 100%;
+				margin-bottom: 15px; 
+				/*Each dropdown link*/
+				a.link-module{
+					display: flex;
+					justify-content: space-between;
+					font-size: 19px; 
+				}
+				/*For open modul triggered by click*/
+				.module-open{	
+					max-height: 3000px !important;
+					padding-bottom: 10px !important;
+					margin-top: 15px !important; 
+					opacity: 1 !important; 
+					visibility: visible !important;
+				}
+				/*Each Dropdown List*/
+				.module-dropdown{
+					width: 100%;
+					margin-top: 15px; 
+					padding-bottom: 10px;
+					/*For Animation*/
+					max-height: 0;
+					padding: 0; margin: 0;
+					opacity: 0; visibility: hidden;
+					transition: all .4s;
+
+					a.link-dropdown{
+						color: #9e9e9e;
+						display: block;
+						font-size: 15px; 
+					}
+					a+a{
+						margin-top: 10px; 
+					}
+					a.link-dropdown.socials-dropdown{
+						display: flex;
+						.ico{
+							margin-right: 10px;
+							color: #fff; 
+						}
+					}
+				}
+			}
+		}
+	}
+}

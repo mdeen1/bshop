@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------ *\
+	Article Box Styles
+\* ------------------------------------------------------------ */
+.article-box {
+	.article-box__head {
+		margin-bottom: 20px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.article-box__overlay--image {
+		height: 320px;
+		width: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		transition: transform .3s;
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	.article-box__body {
+		text-align: center;
+
+		.article-box__date {
+			margin-bottom: 15px;
+			font-size: 12px;
+			color: $color-primary;
+		}
+
+		.article-box__action {
+			line-height: 1.2;
+			font-size: 23px;
+			text-transform: uppercase;
+			color: $color-black;
+			transition: color .3s;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}

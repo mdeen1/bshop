@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	Footer Navigation List
+\* ------------------------------------------------------------ */
+.footer-navigation {
+	padding-bottom: 135px;
+	color: $color-gray;
+
+	a {
+		color: $color-gray;
+		transition: color .3s;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+
+	.standart-list {
+		ul {
+			li {
+				display: block;
+				margin-bottom: 12px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.footer__list-heading {
+		margin-bottom: 20px;
+		font-size: 15px;
+		color: $color-white;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+
+	.store-info {
+		li {
+			margin-bottom: 11px;
+
+			.material-icons {
+				font-size: 17px;
+				vertical-align: middle;
+				margin-right: 6px;
+			}
+
+			a {
+				color: $color-primary;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.footer__socials-list {
+		li {
+			display: inline-block;
+			margin-right: 20px;
+			
+			a:hover {
+				color: $color-primary;
+			}
+
+			i {
+				font-size: 17px;
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------ *\
+	Global Button Stylings
+\* ------------------------------------------------------------ */
+.btn--newsletter {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	background: $color-white;
+	color: $color-black;
+	font-weight: 700;
+}
+
+.btn {
+	position: relative;
+	padding: 10px 8px;
+	background: transparent;
+	border: 1px solid $color-black;
+	color: $color-black;
+	transition: color .5s, background .3s;
+
+	&:hover {
+		color: $color-white;
+		background: $color-black;
+	}
+}
+
+.btn--lg {
+	padding: 15px 12px;
+}
+
+/* ------------------------------------------------------------ *\
+	Base Button
+\* ------------------------------------------------------------ */
+.base-button__icon {
+
+}
+
+.base-button__icon--right {
+	margin-left: 10px;
+}
+
+.base-button__icon--left {
+	margin-right: 10px;
+}
+
+/* ------------------------------------------------------------ *\
+	Btn Mini
+\* ------------------------------------------------------------ */

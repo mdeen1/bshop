@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Bike Shop</title>
+	<!-- <link rel="shortcut icon" href="" /> -->
+
+	<!-- jQuery -->
+	<script src="vendor/jquery-3.1.1.min.js"></script>
+	<script src="vendor/jquery-ui.min.js"></script>
+
+
+	<!-- App Styles -->
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- Slicker -->
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+	<!--/. Font Awesome v5 2018 -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script> 
+
+</head>
+<body>
+	<header class="header" id="header">
+		<div class="header-mobile-contact">Online Store <span>+44 851-23145</span></div><!-- /.header-mobile-contact -->
+		<div class="header__helper">
+			<div class="header__options">
+				<div class="mobile-nav-trigger">
+					<div class="bar"></div>
+				</div><!-- /.mobile-nav-trigger -->
+				<div class="language">
+					<p>En</p><i class="fas fa-angle-down"></i>
+					<div class="options-dropdown dropdown-language">
+						<ul>
+							<li>
+								<a href="#" class="active">En</a>
+							</li>
+							
+							<li>
+								<a href="#">De</a>
+							</li>
+							
+							<li>
+								<a href="#">Ru</a>
+							</li>
+							
+							<li>
+								<a href="#">Es</a>
+							</li>
+							
+							<li>
+								<a href="#">Fr</a>
+							</li>
+						</ul>
+					</div><!-- /.options-dropdown -->
+				</div><!-- /.language -->
+				<div class="currency">
+					<p>$</p><i class="fas fa-angle-down"></i>
+					<div class="options-dropdown dropdown-currency">
+						<ul>
+							<li>
+								<a href="#" class="active">USD</a>
+							</li>
+							
+							<li>
+								<a href="#">GBP</a>
+							</li>
+
+							<li>
+								<a href="#">EU</a>
+							</li>
+						</ul>
+					</div><!-- /.options-dropdown -->
+				</div><!-- /.currency -->
+				<div class="number">
+					Online Store <span>+44 851-23145</span> 
+				</div><!-- /.number -->
+			</div><!-- /.header__options -->
+			<div class="header__logo">
+				<img src="css/images/basic/logo.jpg" alt="logo">
+			</div><!-- /.header__logo -->
+			<div class="header__account">
+				<ul>
+					<li><a href="#"><i class="fas fa-search"></i></a></li>
+					
+					<li><a href="#"><i class="fas fa-redo-alt"></i></a></li>
+					
+					<li><a href="#"><i class="far fa-heart"></i></a></li>
+					
+					<li><a href="#" id="login"><i class="far fa-user login-ico"></i></a>
+						<div class="login-dropdown">
+							<div class="login-header">
+								<div class="cols">
+									<div class="col-1"><i class="fas fa-chevron-right"></i></div><!-- /.col-2 -->
+									
+									<div class="col-7">
+										<p class="login-heading">Sign in</p><!-- /.login-heading -->
+									</div><!-- /.col-6 -->
+									<div class="col-4"></div><!-- /.col-4 -->
+								</div><!-- /.cols -->
+							</div><!-- /.login-header -->
+							<div class="login-body">
+								<div class="login-container">
+									<div class="login-form">
+										<input type="text" placeholder="Email">
+										<input type="password" placeholder="Pasword">
+										<a href="#" class="forgotten">FORGOT YOUR PASSWORD?</a>
+										<a href="#" class="btn btn--form">SIGN IN <i class="fas fa-arrow-right"></i></a>
+									</div><!-- /.login-form -->
+								</div><!-- /.login-container -->
+							</div><!-- /.login-body -->
+							<div class="login-footer">
+								<div class="login-container">
+									<a href="create-account.html" class="no-account">NO ACCOUNT? CREATE ONE HERE</a>
+									<div class="login-socials">
+										<a href="#" class="facebook">FACEBOOK</a>
+										<a href="#" class="google">GOOGLE</a>
+										<a href="#" class="twitter">TWITTER</a>
+									</div><!-- /.login-socials -->
+								</div><!-- /.login-container -->
+							</div><!-- /.login-footer -->
+						</div><!-- /.login -->
+					</li>
+					
+					<li><a href="#" id="btnCart"><i class="fas fa-shopping-cart"></i></a>
+					<div class="cart-count">0</div><!-- /.cart-count -->
+					</li>
+				</ul>
+			</div><!-- /.header__account -->
+
+		</div><!-- /.header__helper -->
+		<div class="header__logo-mobile">
+				<img src="css/images/basic/logo.jpg" alt="logo">
+			</div><!-- /.header__logo-mobile -->
+		<div class="header__navbar">
+			<ul class="nav">
+				<li class="nav-item hoverable-item hover-bikes" id="hoverBikes">
+					Bikes <i class="fas fa-angle-right"></i>
+					<div class="dropdown-menu dropdown-bikes">
+						<ul>
+							<li>
+								<span class="menu-heading">Tandem</span>
+							</li>
+
+							<li>
+								<a href="#">Kent</a>
+							</li>
+							
+							<li>
+								<a href="#">Huffy</a>
+							</li>
+							
+							<li>
+								<a href="#">Giordano</a>
+							</li>
+							
+							<li>
+								<a href="#">Kulana Lua</a>
+							</li>
+							
+							<li>
+								<a href="#">Micargi</a>
+							</li>
+							
+							<li>
+								<a href="#">Hollandia</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="menu-heading">Adult</span>
+							</li>
+
+							<li>
+								<a href="#">City Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Cyclocross Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Commuter Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Endurance Road Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Flat Bar Road Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Track Racing Bikes</a>
+							</li>
+						</ul>
+
+						<ul>
+							<li>
+								<span class="menu-heading">Kid's Bikes</span>
+							</li>
+
+							<li>
+								<a href="#">Balance Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Kid's BMX Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Kid's Mountain Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Kid's Road Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Kid's Sidewalk Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Tricycles</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="menu-heading">All Manufactures</span>
+							</li>
+
+							<li>
+								<a href="#">Bell</a>
+							</li>
+							
+							<li>
+								<a href="#">Cinelli</a>
+							</li>
+							
+							<li>
+								<a href="#">Felt</a>
+							</li>
+							
+							<li>
+								<a href="#">Giant</a>
+							</li>
+							
+							<li>
+								<a href="#">GT</a>
+							</li>
+							
+							<li>
+								<a href="#">Ibera</a>
+							</li>
+							
+							<li>
+								<a href="#">Ridley</a>
+							</li>
+							
+							<li>
+								<a href="#">Surly</a>
+							</li>
+							
+							<li>
+								<a href="#">Wilier</a>
+							</li>
+						</ul>
+					</div><!-- /.dropdown-menu dropdown-bikes -->
+				</li>
+				
+				<li class="nav-item hoverable-item hover-parts" id="hoverParts">
+					Bike Parts <i class="fas fa-angle-right"></i>
+					<div class="dropdown-menu dropdown-parts">
+						<ul>
+							<li>
+								<a href="#">Commuter Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Endurance Road Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Track Racing Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Kid's Road Bikesa</a>
+							</li>
+							
+							<li>
+								<a href="#">Race BMX Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Park BMX Bikes</a>
+							</li>
+
+							<li>
+								<a href="#">Downhill Mountain Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Recreational Mountain Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Tires and Wheels</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="#">Dirt Jump Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Sport Mountain Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Fat Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Hooks and handlebars</a>
+							</li>
+							
+							<li>
+								<a href="#">Clothes</a>
+							</li>
+							
+							<li>
+								<a href="#">Tires and Wheels</a>
+							</li>
+
+							<li>
+								<a href="#">Endurance Road Bikes</a>
+							</li>
+							
+							<li>
+								<a href="#">Cyclocross Bikes</a>
+							</li>
+						</ul>
+					</div><!-- /.dropdown-menu dropdown-parts -->
+				</li>
+				
+				<li class="nav-item" id="accessoriesLink">Accessories &amp; Components</li>
+				
+				<li class="nav-item" id="apparelLink">Apparel</li>
+				
+				<li class="nav-item" id="link-sale">Sale</li>
+			</ul><!-- /.nav -->
+		</div><!-- /.header__navbar -->
+	</header><!-- /#header.header -->
+	
+	<section class="section section-best-sales section-accessories" id="bestsellers">
+		<div class="section-header" style="background-image: url(css/images/basic/acessories.jpg);">
+			<div class="overlay-filter"></div><!-- /.overlay-filter -->
+			<h4>ACCESSORIES &AMP; COMPONENTS</h4>
+		</div><!-- /.section-header -->
+		<div class="cols">
+			<div class="col-2">
+				<h6>FILTER BY</h6>
+				<p class="heading">Availability</p><!-- /.heading -->
+				<div class="sort-wrapper">
+					<label for="outstock" class="checkbox-label">
+						<input type="checkbox" name="outstock">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description not-available">Not Available</span>
+					</label>
+					<label for="instock" class="checkbox-label">
+						<input type="checkbox" name="instock">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description not-available">In Stock</span>
+					</label>
+				</div><!-- /.sort-wrapper -->
+				<p class="heading">Brand</p><!-- /.heading -->
+				<div class="sort-wrapper">
+					<label class="checkbox-label" for="bell">
+						<input type="checkbox" name="bell" >
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Bell</span>
+					</label>
+					<label class="checkbox-label" for="cinelli">
+						<input type="checkbox" name="cinelli">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Cinelli</span>
+					</label>
+					<label class="checkbox-label" for="felt">
+						<input type="checkbox" name="felt">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Felt</span>
+					</label>
+					<label class="checkbox-label" for="ibera">
+						<input type="checkbox" name="ibera">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">IBERA</span>
+					</label>
+					<label class="checkbox-label" for="ridley">
+						<input type="checkbox" name="ridley">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Ridley</span>
+					</label>
+					<label class="checkbox-label" for="surly">
+						<input type="checkbox" name="surly">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Surly</span>
+					</label>
+					<label class="checkbox-label" for="willier">
+						<input type="checkbox" name="willier">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Willier</span>
+					</label>
+					<label class="checkbox-label" for="wolfield">
+						<input type="checkbox" name="wolfield">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description brand">Wolfield</span>
+					</label>
+				</div><!-- /.sort-wrapper -->
+				<p class="heading">Price</p><!-- /.heading -->
+				<div class="radio-wrapper">
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£7.00 - £12.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£16.00 - £17.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£20.00 - £22.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£30.00 - £31.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£36.00 - £37.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£40.00 - £42.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£48.00 - £50.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£264.00 - £275.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£288.00 - £309.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£340.00 - £354.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£370.00 - £385.00</span>
+					</label>
+					<label for="price" class="radio-label">
+						<input type="radio" name="price">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description price">£720.00 - £749.00</span>
+					</label>
+				</div><!-- /.radio-wrapper -->
+				<p class="heading">Gender</p><!-- /.heading -->
+				<div class="sort-wrapper">
+					<label class="checkbox-label" for="unisex">
+						<input type="checkbox" name="unisex">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description gender">Unisex</span>
+					</label>
+					<label class="checkbox-label" for="women">
+						<input type="checkbox" name="women">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description gender">Women's</span>
+					</label>
+					<label class="checkbox-label" for="boys">
+						<input type="checkbox" name="boys">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description gender">Boys</span>
+					</label>
+					<label class="checkbox-label" for="girls">
+						<input type="checkbox" name="girls">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description gender">Girls</span>
+					</label>
+					<label class="checkbox-label" for="kids">
+						<input type="checkbox" name="kids">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description gender">Kid's</span>
+					</label>
+				</div><!-- /.checkbox-wrapper -->
+			</div><!-- /.col-2 -->
+			<div class="col-1">
+				
+			</div><!-- /.col-1 -->
+			<div class="col-9">
+				<div class="shopping__menu">
+					<!-- Options to Filter -->
+					<div class="custom-select">
+						<p id="btnFilter"><span id="change">Sales, highest to lowest</span> <i class="fas fa-angle-down"></i></p>
+						<div class="filter-dropdown">
+							<a href="#" id='option' class="filter-link filter-link-active">Sales, highest to lowest</a>
+							
+							<a href="#" id="name-az" class="filter-link">Name, A to Z</a>
+							
+							<a href="#" id='name-za' class="filter-link">Name, Z to A</a>
+							
+							<a href="#" id="low-high" class="filter-link">Price, low to high</a>
+
+							<a href="#" id='high-low' class="filter-link">Price, high to low</a>
+						</div><!-- /.filter-dropdown -->
+					</div><!-- /.custom-select -->
+					<!-- Options for different View -->
+					<div class="custom-view">
+						<a href="#" class="svg-active" id="view-grid"><i class="fas fa-th"></i></a>
+						<a href="#" id="view-list"><i class="fas fa-list-ul"></i></a>
+					</div><!-- /.custom-view -->
+				</div><!-- /.shopping__menu -->
+
+				<div class="shopping__boxes">
+					<div class="item" id="bellHelmet" data-name='bellsolarbikehelmet' data-price='16.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/bell-1.jpg" alt="bell helmet">
+								<img src="css/images/shop/bell-2.jpg" alt="bell helmet">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Bell Solar Bike Helmet</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">16.00</span></span>
+										<span class="old-price">£20.00</span>
+										<span class="discount">-20%</span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div><!-- /.item-/-horizontal-mq -->
+					</div><!-- /.item -->
+
+					<div class="item" id="seatSpot" data-name='bicycleseatspot' data-price='30.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/seatspot-2.jpg" alt="seatSpot">
+								<img src="css/images/shop/seatspot-1.jpg" alt="seatSpot">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Bicycle Seatspot</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">30.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="dualSuspen" data-name='dualsuspensionmountainbike' data-price='264.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/dualsuspen-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/dualsuspen-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Dual Suspension Mountain Bike</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">264.00</span></span>
+										<span class="old-price">£330.00</span>
+										<span class="discount">-20%</span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="dualSuspen" data-name='1fatbike' data-price='720.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/dualsuspen-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/dualsuspen-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+								<span class="reduced">reduced price</span>
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>1.0 Fat Bike</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">720.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="flatBike" data-name='aluminumroadbike' data-price='320.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/bike-1.jpg" alt="flat bike">
+								<img src="css/images/shop/bike-2.jpg" alt="flat bike">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Aluminum Road Bike</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">288.00</span></span>
+										<span class="old-price">£320.00</span>
+										<span class="discount">-10%</span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="floorPump" data-name='steelfloorpump' data-price='36.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/floor-pump-1.jpg" alt="shop pump">
+								<img src="css/images/shop/floor-pump-2.jpg" alt="shop pump">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Steel Floor Pump With Gauge</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">36.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="aluminumBottle" data-name='lightweightaluminum' data-price='9.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/aluminum-bottle-1.jpg" alt="bottle pump">
+								<img src="css/images/shop/aluminum-bottle-2.jpg" alt="bottle pump">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Lightweight Aluminum Water Bottle Cage</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">9.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="ledLight" data-name='safecyclear' data-price='9.60'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/led-light-1.jpg" alt="shop led">
+								<img src="css/images/shop/led-light-2.jpg" alt="shop led">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>SafeCycler LED Bike Lights</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">9.60</span></span>
+										<span class="old-price">£12.00</span>
+										<span class="discount">-20%</span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="bicyclewater" data-name='bicyclewater' data-price='10.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/water-cage-1.jpg" alt="shop pump">
+								<img src="css/images/shop/water-cage-2.jpg" alt="shop pump">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Bicycle Water Bottle Cage</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">10.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="mountainBike" data-name='mountainbike' data-price='297.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/mtb-bike-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/mtb-bike-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+								<span class="onsale">on sale!</span>
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Mountain Bike MTB</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">297.00</span></span>
+										<span class="old-price">£330.00</span>
+										<span class="discount">-10%</span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="plainMTB" data-name='mountainbike' data-price='370.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/mtb-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/mtb-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+								<span class="new">new</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Mountain Bike</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">370.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+
+					<div class="item" id="mtb24" data-name='mountainbike' data-price='289.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/mtb-24-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/mtb-24-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+								<span class="reduced">reduced price</span>
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Mountain Bike MTB 24 Speed</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">289.00</span></span>
+										<span class="old-price">£340.00</span>
+										<span class="discount">-15%</span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+
+					<div class="item" id="shimanoFlat" data-name='shimanohybridflat' data-price='340.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/shimano-flat-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/shimano-flat-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Shimano Hybrid Flat Bar Commuter Road Bike</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">340.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+						
+					<div class="item" id="sportswear" data-name='sportswearset' data-price='40.00'>
+						<div class="item--head">
+							<div class="item-images">
+								<img src="css/images/shop/sportswear-1.jpg" alt="dual suspen">
+								<img src="css/images/shop/sportswear-2.jpg" alt="dual suspen">
+							</div>
+
+							<div class="item--specs">
+
+							</div><!-- /.item-/-specs -->
+						</div><!-- /.item-/-head -->
+						<div class="item--content-mq">
+							<div class="item--body">
+								<div class="item--hover">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="aligned-right">
+										<i class="fas fa-redo-alt"></i>
+										<i class="far fa-heart"></i>
+										<i class="fas fa-eye"></i>
+									</div><!-- /.aligned-right -->
+								</div><!-- /.item-/-hover -->
+								
+								<div class="item--body-text">
+									<h4>Sportswear Set Breathable</h4>
+									<p class="visible-horizontal">
+										Do you remember what it is like to be cruising on the boulevard and catching fresh spring wind on the shiny and chromed old school bike? We adore that unforgettable feeling that takes your...
+									</p><!-- /.visible-horizontal -->
+									<div class="prices">
+										<span class="bold">£<span class="ui-price">40.00</span></span>
+									</div><!-- /.prices -->
+								</div><!-- /.item-/-body-text -->
+							</div><!-- /.item-/-body -->
+							<div class="item--footer">
+								<a href="#" class="btn btn--lg btn--rev">ADD TO CART +</a>
+								<div class="footer--socials">
+									<a href="#"><i class="fas fa-redo-alt"></i></a>
+									<a href="#"><i class="far fa-heart"></i></a>
+									<a href="#"><i class="fas fa-eye"></i></a>
+									<a href="#" class="shopping-on-mq"><i class="fas fa-shopping-cart"></i></a>
+								</div><!-- /.footer-socials -->
+							</div><!-- /.item-footer -->
+						</div>
+					</div><!-- /.item -->
+				</div><!-- /.shopping__boxes -->
+			</div><!-- /.col-9 -->
+		</div><!-- /.cols -->
+	</section><!-- /#bestsellers.section -->
+	
+	<div id="modalShoppingCart" class="modal-shopping-cart">
+		<div class="cart-header">
+			<div class="cols">
+				<div class="col-3"><i class="fas fa-chevron-right"></i></div><!-- /.col-3 -->
+				<div class="col-1"></div><!-- /.col-1 -->
+				<div class="col-3">
+					<p class="cart-heading">Cart</p><!-- /.cart-heading -->
+				</div><!-- /.col-3 -->
+				<div class="col-4"></div><!-- /.col-4 -->
+			</div><!-- /.cols -->
+		</div><!-- /.cart-header -->
+		<div class="cart-body">
+			<div class="cart-body-inner">
+				<p class="no-items">The cart is empty</p><!-- /.no-items -->
+			</div><!-- /.cart-body-inner -->
+		</div><!-- /.cart-body -->
+		<div class="cart-footer">
+			<div class="cart-footer-inner">
+				<div class="cols no-gutters">
+					<div class="col-6">Subtotal</div><!-- /.col-6 -->
+					
+					<div class="col-6 col-value">£<span class="subtotal">0.00</span></div><!-- /.col-6 -->
+				</div><!-- /.cols -->
+				<div class="cols">
+					<div class="col-6">Shipping</div><!-- /.col-6 -->
+					
+					<div class="col-6 col-value">Free</div><!-- /.col-6 -->
+				</div><!-- /.cols -->
+				<div class="cols">
+					<div class="col-6">Taxes</div><!-- /.col-6 -->
+					
+					<div class="col-6 col-value">£<span class="subtotal">0.00</span></div><!-- /.col-6 -->
+				</div><!-- /.cols -->
+				<div class="cols">
+					<div class="col-6">Total</div><!-- /.col-6 -->
+					
+					<div class="col-6 col-value">£<span class="subtotal">0.00</span></div><!-- /.col-6 -->
+				</div><!-- /.cols -->
+				<div class="btn-container">
+					<a href="#" class="btn btn--form">PROCEED TO CHECKOUT <i class="fas fa-arrow-right"></i></a>
+				</div><!-- /.btn-container -->
+			</div><!-- /.cart-footer-inner -->
+		</div><!-- /.cart-footer -->
+
+
+		<div class="close-modal-shopping"></div><!-- /.close-modal-shopping -->
+	</div><!-- /#modalShoppingCart -->
+
+	<div class="mobile-nav" id="mobileNav">
+		<div class="mobile-nav-wrapper">
+			<div class="language-currency">
+				<div class="select-language">
+					<label for="language">Language:</label>
+					<select name="language">
+					  <option value="en">English</option>
+					  <option value="de">Deutch</option>
+					  <option value="russ">Russian</option>
+					  <option value="es">Spanish</option>
+					  <option value="fr">French</option>
+					</select>
+				</div>
+				<div class="select-currency">
+					<label for="currency">Currency:</label>
+					<select name="currency">
+						<option value="usd">USD ($)</option>
+						<option value="gbp">GBP (£)</option>
+						<option value="eu">EU (€)</option>
+					</select>
+				</div><!-- /.select-currency -->
+			</div><!-- /.language-currency -->
+
+			<ul class="mobile-nav-links">
+				<li class="mobile-item mobile-item-with-dropdown">
+					<a href="#" class="mobile-link mobile-link-flex">
+						<div>Bikes</div>
+						<div><i class="fas fa-angle-down"></i></div>
+					</a>
+					<div class="mobile-nav-dropdown">
+						<div class="mobile-nav-box">
+							<a href="#" class="dropdown-active mobile-nav-item">Tandem</a>
+							
+							<a href="#" class="mobile-nav-item">Kent</a>
+							
+							<a href="#" class="mobile-nav-item">Huffy</a>
+							
+							<a href="#" class="mobile-nav-item">Giordano</a>
+							
+							<a href="#" class="mobile-nav-item">Kulana Lua</a>
+							
+							<a href="#" class="mobile-nav-item">Micargi</a>
+
+							<a href="#" class="mobile-nav-item">Hollandia</a>
+						</div><!-- /.mobile-nav-box -->
+
+						<div class="mobile-nav-box">
+							<a href="#" class="dropdown-active mobile-nav-item">Adults</a>
+							
+							<a href="#" class="mobile-nav-item">City Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Commuter Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Cyclocross Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Endurance Road Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Flat Bar Road Bikes</a>
+
+							<a href="#" class="mobile-nav-item">Track Racing Bikes</a>
+						</div><!-- /.mobile-nav-box -->
+
+						<div class="mobile-nav-box">
+							<a href="#" class="dropdown-active mobile-nav-item">Kid's Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Balance Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Kid's BMX Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Kid's Mountain Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Kid's Road Bikes</a>
+							
+							<a href="#" class="mobile-nav-item">Kid's Sidewalk Bikes</a>
+
+							<a href="#" class="mobile-nav-item">Tricycles</a>	
+						</div><!-- /.mobile-nav-box -->
+
+						<div class="mobile-nav-box">
+							<a href="#" class="dropdown-active mobile-nav-item">All manufactures</a>
+							
+							<a href="#" class="mobile-nav-item">Bell</a>
+							
+							<a href="#" class="mobile-nav-item">Cinelli</a>
+							
+							<a href="#" class="mobile-nav-item">Felt</a>
+							
+							<a href="#" class="mobile-nav-item">Giant</a>
+							
+							<a href="#" class="mobile-nav-item">GT</a>
+
+							<a href="#" class="mobile-nav-item">IBERA</a>
+
+							<a href="#" class="mobile-nav-item">Ridley</a>
+							
+							<a href="#" class="mobile-nav-item">Surly</a>
+							
+							<a href="#" class="mobile-nav-item">Wiler</a>
+							
+							<a href="#" class="mobile-nav-item">Wolfield</a>
+						</div><!-- /.mobile-nav-box -->
+					</div><!-- /.mobile-nav-dropdown -->
+				</li><!-- /.mobile-item -->
+				
+				<li class="mobile-item mobile-item-with-dropdown">
+					<a href="#" class="mobile-link mobile-link-flex">
+						<div>Bike Parts</div>
+						<div><i class="fas fa-angle-down"></i></div>
+					</a>
+					<div class="mobile-nav-dropdown">
+						<div class="mobile-nav-box">
+							<a href="#" class="mobile-nav-item dropdown-active">Commuter Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Endurance Road Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Track Racing Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Kid's Road Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Race BMX Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Park BMX Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Downhill Mountain Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Recreational Mountain Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Tires and Wheels</a>
+						</div><!-- /.mobile-nav-box -->
+						<div class="mobile-nav-box">
+							<a href="#" class="mobile-nav-item dropdown-active">Dirt Jump Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Fat Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Sport Mountain Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Clothes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Hooks and handlebars</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Tires and Wheels</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Endurance Road Bikes</a>
+							
+							<a href="#" class="mobile-nav-item dropdown-active">Cyclocross Bikes</a>
+						</div><!-- /.mobile-nav-box -->
+					</div><!-- /.mobile-nav-dropdown -->
+				</li><!-- /.mobile-item -->
+				
+				<li class="mobile-item">
+					<a href="accessories.html" class="mobile-link">Accessories &amp; Components</a>
+				</li><!-- /.mobile-item -->
+				
+				<li class="mobile-item">
+					<a href="apparel.html" class="mobile-link">Apparel</a>
+				</li><!-- /.mobile-item -->
+				
+				<li class="mobile-item">
+					<a href="sales.html" class="mobile-link mobile-link-active">Sale</a>
+				</li><!-- /.mobile-item -->
+			</ul><!-- /.mobile-nav-links -->
+
+		</div><!-- /.mobile-nav-wrapper -->
+	</div><!-- /.mobile-nav -->
+
+
+	<footer class="footer" id="footer">
+		
+		<p class="newsletter--heading">Join Our Newsletter</p>
+		<div class="newsletter">
+			<input type="text" placeholder="Enter your email address">
+			<a href="#" class="btn--newsletter">SUBSCRIBE</a>
+		</div><!-- /.newsletter -->
+
+		<div class="footer__links">
+			<div class="cols">
+				<div class="col-2">
+					<li><a href="#">Shop by Bike Type</a></li>
+					
+					<li><a href="#">Bike Parts</a></li>
+					
+					<li><a href="#">Bike Tools</a></li>
+					
+					<li><a href="#">Clothes</a></li>
+					
+					<li><a href="#">Hooks and Handlebars</a></li>
+					
+					<li><a href="#">Tires and Wheels</a></li>
+					
+					<li><a href="#">Accessories</a></li>
+					
+					<li><a href="#">Lights</a></li>
+					
+					<li><a href="#">Bikes and Frames</a></li>
+				</div><!-- /.col-2 -->
+				<div class="col-2">
+					<li><a href="delivery.html">Delivery</a></li>
+					
+					<li><a href="legal-notice.html">Legal Notice</a></li>
+					
+					<li><a href="termsandcond.html">Terms and conditions</a></li>
+					
+					<li><a href="aboutus.html">About us</a></li>
+					
+					<li><a href="secure-payment.html">Secure Payment</a></li>
+					
+					<li><a href="login.html">Pages configuration</a></li>
+					
+					<li><a href="warranty.html">Warranty</a></li>
+					
+					<li><a href="faq.html">FAQs</a></li>
+					
+					<li><a href="support.html">Support</a></li>
+					
+					<li><a href="contactus.html">Contact Us</a></li>
+					
+					<li><a href="sitemap.html">Sitemap</a></li>
+					
+					<li><a href="ourstores.html">Stores</a></li>
+					
+					<li id="lookbookLink"><a href="lookbook.html">Lookbook</a></li>
+				</div><!-- /.col-2 -->
+				<div class="col-2">
+					<li><a href="login.html">Personal Info</a></li>
+					
+					<li><a href="login.html">Orders</a></li>
+					
+					<li><a href="login.html">Credit Slips</a></li>
+					
+					<li><a href="login.html">Adresses</a></li>
+					
+					<li><a href="login.html">My Wishlist</a></li>
+				</div><!-- /.col-2 -->
+				<div class="col-1"></div><!-- /.col-1 -->
+				<div class="col-3 footer-style">
+					<a href="#" class="col--heading">Store Information</a>
+					<ul>
+						<li><i class="fas fa-map-marker"></i><span class="text">4578 Marmora Road, Glasgow D04 89GR</span></li>
+						
+						<li><i class="fas fa-mobile-alt"></i><span class="text">0123-456-789</span></li>
+						
+						<li><i class="fas fa-envelope"></i><span class="text"><a href="#" class="link">info@demolink.com</a></span></li>
+					</ul>
+				</div><!-- /.col-3 -->
+				<div class="col-2 footer-style">
+					<a href="#" class="col--heading">Follow Us</a>
+					<ul id="socials">
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						
+						<li><a href="#"><i class="fab fa-google"></i></a></li>
+						
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						
+						<li><a href="#"><i class="fab fa-behance"></i></a></li>
+					</ul>
+				</div><!-- /.col-2 -->
+			</div><!-- /.cols -->
+		</div><!-- /.footer__links -->
+
+		<!-- Mobile Footer -->
+		<div class="footer__links-mobile">
+			<!-- Wrapper of all modules/dropdown links -->
+			<div class="modules-wrapper">
+				<!-- Each Module with link + dropdown -->
+				<div class="footer-mobile-module">
+					<a href="#" class="link-module">
+						<div class="module-name">Categories</div> 
+						<div class="module-ico"><i class="fas fa-angle-down"></i></div>
+					</a>
+					<div class="module-dropdown">
+						<a href="#" class="link-dropdown">Shop By Bike Type</a>
+
+						<a href="#" class="link-dropdown">Bike parts</a>
+
+						<a href="#" class="link-dropdown">Bike Tools</a>
+
+						<a href="#" class="link-dropdown">Clothes</a>
+
+						<a href="#" class="link-dropdown">Hooks and handlebars</a>
+
+						<a href="#" class="link-dropdown">Tires and Wheels</a>
+
+						<a href="accessories.html" class="link-dropdown">Accessories</a>
+
+						<a href="#" class="link-dropdown">Lights</a>
+
+						<a href="#" class="link-dropdown">Bikes and Frames</a>
+					</div><!-- /.module-dropdown -->
+				</div><!-- /.footer-mobile-module -->
+
+				<div class="footer-mobile-module">
+					<a href="#" class="link-module">
+						<div class="module-name">Information</div> 
+						<div class="module-ico"><i class="fas fa-angle-down"></i></div>
+					</a>
+					<div class="module-dropdown">
+						<a href="delivery.html" class="link-dropdown">Delivery</a>
+
+						<a href="legal-notice.html" class="link-dropdown">Legal Notice</a>
+
+						<a href="termsandcond.html" class="link-dropdown">Terms and conditions of use</a>
+
+						<a href="aboutus.html" class="link-dropdown">About us</a>
+
+						<a href="secure-payment.html" class="link-dropdown">Secure payment</a>
+
+						<a href="login.html" class="link-dropdown">Pages configuration</a>
+
+						<a href="warranty.html" class="link-dropdown">Warranty</a>
+
+						<a href="faq.html" class="link-dropdown">FAQs</a>
+
+						<a href="support.html" class="link-dropdown">Support</a>
+
+						<a href="contactus.html" class="link-dropdown">Contact us</a>
+
+						<a href="sitemap.html" class="link-dropdown">Sitemap</a>
+
+						<a href="ourstores.html" class="link-dropdown">Stores</a>
+
+						<a href="lookbook.html" class="link-dropdown">Lookbook</a>
+					</div><!-- /.module-dropdown -->
+				</div><!-- /.footer-mobile-module -->
+
+				<div class="footer-mobile-module">
+					<a href="#" class="link-module">
+						<div class="module-name">Your account</div> 
+						<div class="module-ico"><i class="fas fa-angle-down"></i></div>
+					</a>
+					<div class="module-dropdown">
+						<a href="login.html" class="link-dropdown">Personal info</a>
+
+						<a href="login.html" class="link-dropdown">Orders</a>
+
+						<a href="login.html" class="link-dropdown">Credit slips</a>
+
+						<a href="login.html" class="link-dropdown">Addresses</a>
+
+						<a href="login.html" class="link-dropdown">My wishlist</a>
+					</div><!-- /.module-dropdown -->
+				</div><!-- /.footer-mobile-module -->
+			
+				<div class="footer-mobile-module">
+					<a href="#" class="link-module">
+						<div class="module-name">Store information</div> 
+						<div class="module-ico"><i class="fas fa-angle-down"></i></div>
+					</a>
+					<div class="module-dropdown">
+						<a href="#" class="link-dropdown socials-dropdown">
+							<div class="ico"><i class="fas fa-map-marker"></i></div><!-- /.ico -->
+							<div class="info">4578 Marmora Road, Glasgow D04 89GR</div><!-- /.info -->
+						</a>
+
+						<a href="#" class="link-dropdown socials-dropdown">
+							<span class="ico"><i class="fas fa-mobile-alt"></i></span>
+							<span class="info">0123-456-78</span>
+						</a>
+
+						<a href="#" class="link-dropdown socials-dropdown">
+							<span class="ico"><i class="fas fa-envelope"></i></span>
+							<span class="info">info@demolink.com</span>
+						</a>
+
+					</div><!-- /.module-dropdown -->
+				</div><!-- /.footer-mobile-module -->
+
+			</div><!-- /.modules-wrapper -->
+
+		</div><!-- /.footer__links-mobile -->
+	</footer><!-- /#footer.footer -->
+	
+	<script src="js/functions.js"></script>
+	<script src="vendor/smooth-scroll.js"></script>
+</body>
+</html>

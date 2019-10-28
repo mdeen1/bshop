@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------ *\
+	Newsletter
+\* ------------------------------------------------------------ */
+.newsletter {
+	position: relative;
+	padding: 80px 0 150px;
+	text-align: center;
+	color: $color-white;
+
+	.newsletter__title {
+		font-size: 24px;
+		margin-bottom: 40px;
+		font-weight: 400;
+	}
+
+	.newsletter__form {
+		position: relative;
+		display: block;
+		width: 50%;
+		height: 55px;
+		margin: 0 auto;
+		background: $color-white;
+
+		input {
+			position: absolute;
+			top: 0;
+			left: 40px;
+			width: calc(100% - 40px);
+			height: 100%;
+			border: none;
+			outline: none;
+			padding: 10px;
+			color: $color-black;
+		}
+
+		button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 0 20px;
+			height: 100%;
+			font-size: 15px;
+			border: none;
+			text-transform: uppercase;
+			background: transparent;
+			color: $color-black;
+			cursor: pointer;
+			transition: color 0.3s, background 0.3s;
+
+			&:hover {
+				color: $color-black;
+				background: $color-primary;
+			}
+		}
+
+		.material-icons {
+			position: absolute;
+			top: 18px;
+			left: 12px;
+			color: $color-black;
+			font-size: 20px;
+			opacity: 0.9;
+		}
+	}
+}

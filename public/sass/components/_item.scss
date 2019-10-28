@@ -1,0 +1,403 @@
+.item-active{
+	visibility: visible !important;
+	opacity: 1 !important;
+	margin: 0 1% !important;
+	margin-bottom: 3rem !important;
+	padding-bottom: 3.5rem !important;  
+	width: 30% !important;
+}
+.item-nonactive{
+	visibility: hidden !important;
+	opacity: 0 !important;
+	margin: 0 !important;
+	padding-bottom: 0 !important; 
+	width: 0 !important;
+}
+.item{
+	width: 30%;
+	margin: 0 1%;
+	text-align: center;
+	padding-bottom: 3.5rem;
+	margin-bottom: 3rem; 
+	transition: all .2s;
+
+	.item--head{
+		position: relative; 
+
+		.item--specs{
+			position: absolute; 
+			top: 1rem; left: 0;
+			color: $color-white;
+			font-size: 1.3rem;
+			z-index: 30;
+
+			.onsale{
+				background-color: $color-primary;
+				color: $color-black;
+				padding: .7rem .5rem;
+			}
+			.reduced{
+				background-color: $color-primary;
+				color: $color-white;
+				padding: .7rem .5rem;
+			}
+			.new{
+				background-color: $color-black;
+				color: $color-white;
+				padding: .7rem .5rem;
+			}
+			.pack{
+				background-color: #1c56e8;
+				color: $color-white;
+				padding: .7rem .5rem;
+			}
+		}
+	}
+	
+
+	&:hover {
+		.item-images {
+			img {
+				opacity: 0;
+				visibility: hidden;
+				z-index: -1;
+			}
+
+			img + img {
+				opacity: 1;
+				z-index: 20;
+				visibility: visible;
+			}
+		}		
+	}
+
+	.item-images {
+		position: relative;
+		overflow: hidden;
+		
+		img {
+			transition: opacity .3s, visibility .3s, z-index .3s;
+		}
+
+		img + img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			z-index: -1;
+			visibility: hidden;
+		}
+	}
+
+	.item--body{
+		position: relative;
+
+		.item--hover{
+			display: flex;
+			justify-content: space-between;
+			padding: 1.4rem 2rem;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			right: 0;
+			width: 100%; 
+			font-size: 2.2rem; 
+			background-color: rgba($color-gray, .8);
+			visibility: hidden;
+			opacity: 0; 
+			z-index: 30;
+			transition: all .3s;
+
+			svg{
+				cursor: pointer;
+				transition: color .3s;
+				&:hover{
+					color: $color-primary;
+				}
+			}
+			svg+svg{
+				margin-left: 1rem; 
+			}
+
+		}
+
+		.item--body-text{
+			padding: 3rem 1rem;
+
+			h4{ 
+				font-size: 2.4rem;
+				font-weight: 300; 
+				cursor: pointer;
+				&:hover{
+					color: $color-primary;
+				} 
+			}
+
+			.prices{
+				
+				margin-top: 35px; 
+				.bold{
+					font-size: 2rem; 
+					color: $color-black;
+					font-weight: 500; 
+				}
+				.old-price{
+					font-size: 2rem;
+					color: $color-gray-dark;
+					text-decoration: line-through; 
+					font-weight: 300;
+					margin: 0 1rem; 
+				}
+				.discount{
+					font-size: 3rem;
+					color: $color-primary;
+					font-weight: 500;  
+				}
+			}
+		}
+	}
+	/*For List view*/
+	.item--footer{
+		display: none;
+	}
+	.visible-horizontal{
+		display: none;
+	}
+
+	&:hover{
+		box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1.875rem 0px;
+
+		.item--hover{
+			visibility: visible;
+			opacity: 1; 
+		}
+	}
+}
+
+/*Aligning item to the horizontal list*/
+.item-horizontal{
+	width: 100% !important;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	padding:  0 10px;
+
+	.item--head{
+		width: 25%;
+		img{
+			width: 220px;
+		}
+	}
+	.item--body{
+		width: 35%;
+		.item--body-text{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h4{
+				margin-bottom: 15px; 
+			}
+		}
+		.visible-horizontal{
+			display: block !important; 
+			font-size: 14px; 
+			color: #9e9e9e;
+		}
+	}
+	.item--footer{
+		display: block !important;
+		width: 30%;
+		margin-top: 60px; 
+		align-self: flex-start;
+		.footer--socials{
+			margin-top: 40px;
+			font-size: 20px;  
+			text-align: left;
+			padding-left: 30px; 
+
+			a{
+				color: $color-black;
+				transition: color .4s ease;
+
+				&:hover{
+					color: $color-primary;
+				}
+			}
+			a+a{
+				margin-left: 10px; 
+			}
+
+			.shopping-on-mq{
+				display: none;
+			}
+		}
+	}
+	
+	&:hover{
+		/*Clearing hover effect from Grid View*/
+		.item--hover{
+			visibility: hidden !important;
+			opacity: 0 !important; 
+		}
+	}
+} /*  Closing the div with horizontal list view  */
+
+@media(min-width: 1200px){
+	.item{
+		width: 30%;
+	}
+	/*Horizontal Item View*/
+	.item-horizontal{
+		
+		.item--head{
+			width: 30%
+			img{ 
+				height: auto;   
+			}
+		}
+		.item--content-mq{
+			width: 70%;
+			display: flex;
+			
+			.item--body{
+				width: 100%;
+			}
+			.item--footer{
+				width: 100%;
+
+				.footer--socials{
+
+					text-align: center;
+					padding-left: 0; 
+				}
+			}
+			
+		}
+	}
+}
+@media(max-width: 1199px){
+	.item{
+		width: 48%;
+	}
+	.item--head{
+		position: relative; 
+		img{
+			height: 250px;
+		}
+	}
+	/*Horizontal Item View*/
+	.item-horizontal{
+		padding-bottom: 25px;
+		.item--head{
+			width: 50%;
+		}
+		.item--content-mq{
+			width: 50%;
+		}
+		.item--body{
+			width: 100%;
+			.item--body-text{
+				.prices{
+					margin-top: 20px; 
+				}
+			}
+		}
+		.item--footer{
+			width: 100%;
+			margin-top: 30px; 
+			.footer--socials{
+				text-align: center;
+				padding-left: 0; 
+			}
+		}
+	}
+}
+
+@media(max-width: 920px){
+	.item--head{
+		img{
+			height: auto;
+		}
+	}
+}
+@media(max-width: 767px){
+	.section-best-sales{
+		.cols{
+
+			.col-2{ display: none; }
+			.col-1{ display: none; }
+			.col-9{
+			    flex: 0 0 100%;
+    			max-width: 100%;
+			}
+		}
+
+	}
+	.item--head{
+		img{
+			height: auto;
+		}
+	}
+	.item{
+		margin: 2%;
+		width: 46%;
+		.item--body{
+			.item--hover{
+				opacity: 1;
+				visibility: visible; 
+				top: 0;
+			}
+			.item--body-text{
+				padding-top: 6rem;
+				.prices{
+					margin-top: 3rem; 
+				} 
+			}
+		}
+	}
+	/*Horizontal Item View*/
+	.item-horizontal{
+
+		.item--head{
+			width: 30%;
+		}
+		.item--content-mq{
+			width: 70%;
+		}
+
+		.item--body{
+			.item--hover{
+				display: none;
+			}
+			.visible-horizontal{
+				display: none !important;
+			}
+			.item--body-text{
+				.prices{
+					margin-top: 5px; 
+				}
+			}
+		}
+		.item--footer{
+			width: 100%;
+			margin-top: 10px; 
+			.footer--socials{
+				text-align: center;
+				padding-left: 0; 
+
+				.shopping-on-mq{
+					display: inline-block;
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

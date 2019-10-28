@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	Dropdown
+\* ------------------------------------------------------------ */
+.dropdown {
+	position: relative;
+	display: inline-block;
+
+	&.active {
+		.dropdown__head {
+			color: $color-primary;
+		}
+
+		.dropdown__body {
+			background: $color-white;
+			opacity: 1;
+			visibility: visible;
+			z-index: 1;
+
+			li {
+				margin-bottom: 6px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.dropdown__head {
+		cursor: pointer;
+		transition: color .3s;
+
+		&.color--gray {
+			color: $color-gray;
+		}
+
+		.dropdown__head-icon {
+			display: inline-block;
+			vertical-align: middle;
+			color: inherit;
+
+			.material-icons {
+				margin-left: -2px;
+				font-size: 15px;
+			}
+		}
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	.dropdown__body {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 8px;
+		box-shadow: 0 1px 5px;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility .3s, height .3s;
+
+		.dropdown__body-inner {
+			padding: 10px;
+
+			ul {
+				.tag {
+					cursor: pointer;
+					transition: color .3s;
+
+					&:hover {
+						color: $color-primary;
+					}
+				}
+			}
+		}
+	}
+}

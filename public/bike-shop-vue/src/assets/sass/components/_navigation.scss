@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------ *\
+	Global Nav Styles
+\* ------------------------------------------------------------ */
+.navigation {
+	.navigation__inner {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background: $color-black;
+		color: $color-white;
+	}
+
+	.navigation__list {
+		text-align: center;
+
+		.navigation__item {
+			position: relative;
+			display: inline-block;
+			font-size: 16px;
+
+			.material-icons {
+				vertical-align: middle;
+			}
+
+			&:hover {
+				.navigation__dropdown {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+
+		a {
+			font-size: 14px;
+			color: $color-white;
+			transition: color .3s;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+		
+		.navigation__item--indicator {
+			&:before {
+				content: '';
+				position: absolute;
+				top: 125%;
+				left: 50%;
+				width: 0;
+				height: 0;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid #fff;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity .2s, visibility .2s;
+			}
+
+			&:hover {
+				&:before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		.navigation__item + .navigation__item {
+			margin-left: 20px;
+		}
+
+		.navigation__dropdown {
+			position: absolute;
+			top: 100%;
+			margin-top: 15px;
+			padding: 20px 15px 50px 15px;
+			min-width: 40vw;
+			font-size: 13px;
+			text-align: left;
+			border-bottom: 4px solid #000;
+			background: $color-white;
+			color: $color-gray;
+			z-index: 20;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity .3s, visibility .3s;
+
+			&.extended {
+				min-width: 50vw;
+
+				.navigation__dropdown-title {
+					margin-bottom: 30px;
+					font-size: 18px;
+					font-weight: 500;
+					color: $color-black;
+				}
+			}
+
+			a {
+				color: $color-gray;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+
+			.dropdown__item {
+				margin-bottom: 12px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

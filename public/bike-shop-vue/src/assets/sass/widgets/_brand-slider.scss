@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Brand Slider Styles
+\* ------------------------------------------------------------ */
+
+.brand-slider {
+	.swiper-wrapper {
+		padding: 0 150px;
+	}
+
+	.brand-slider__image {
+		height: 140px;
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		filter: grayscale(100%);
+		transition: filter .3s;
+
+		&:hover {
+			filter: grayscale(0%);
+		}
+	}
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		left: -30px;
+	}
+}

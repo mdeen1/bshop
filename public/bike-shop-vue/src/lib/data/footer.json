@@ -1,0 +1,164 @@
+{
+	"dataLinks": {
+			"links": {
+				"rowOne": [
+					{
+						"title": "Shop by Bike Type",
+						"link": "/"
+					},
+					{
+						"title": "Bike parts",
+						"link": "/"
+					},
+					{
+						"title": "Bike Tools",
+						"link": "/"
+					},
+					{
+						"title": "Clothes",
+						"link": "/"
+					},
+					{
+						"title": "Hooks and handlebars",
+						"link": "/"
+					},
+					{
+						"title": "Tires and Wheels",
+						"link": "/"
+					},
+					{
+						"title": "Accessories",
+						"link": "/"
+					},
+					{
+						"title": "Lights",
+						"link": "/"
+					},
+					{
+						"title": "Bikes and Frames",
+						"link": "/"
+					}
+				],
+				"rowTwo": [
+					{
+						"title": "Delivery",
+						"link": "/"
+					},
+					{
+						"title": "Legal Notice",
+						"link": "/"
+					},
+					{
+						"title": "Terms and conditions of use",
+						"link": "/"
+					},
+					{
+						"title": "About us",
+						"link": "/"
+					},
+					{
+						"title": "Secure payment",
+						"link": "/"
+					},
+					{
+						"title": "Pages configuration",
+						"link": "/"
+					},
+					{
+						"title": "Warranty",
+						"link": "/"
+					},
+					{
+						"title": "FAQs",
+						"link": "/"
+					},
+					{
+						"title": "Support",
+						"link": "/"
+					},
+					{
+						"title": "Contact us",
+						"link": "/"
+					},
+					{
+						"title": "Sitemap",
+						"link": "/"
+					},
+					{
+						"title": "Stores",
+						"link": "/"
+					},
+					{
+						"title": "Lookbook",
+						"link": "/"
+					}
+				],
+				"rowThree": [
+					{
+						"title": "Personal info",
+						"link": "/"
+					},
+					{
+						"title": "Orders",
+						"link": "/"
+					},
+					{
+						"title": "Credit slips",
+						"link": "/"
+					},
+					{
+						"title": "Addresses",
+						"link": "/"
+					},
+					{
+						"title": "My wishlists",
+						"link": "/"
+					}
+				]
+			}
+	},
+	"storeInfo": {
+		"heading": "Store information",
+		"link": "/",
+		"list": [
+			{
+				"ico": "location_on",
+				"title": "4578 Marmora Road, Glasgow D04 89GR"
+			},
+			{
+				"ico": "phone",
+				"title": "0123-456-789"
+			},
+			{
+				"ico": "email",
+				"title": "info@demolink.com",
+				"link": "mailto:info@demolink.com"
+			}
+		]
+	},
+	"socials": {
+			"heading": "Follow Us",
+			"list": [
+				{
+					"ico": "fab fa-facebook-f",
+					"link": "/"
+				},
+				{
+					"ico": "fab fa-twitter",
+					"link": "/"
+				},
+				{
+					"ico": "fab fa-google",
+					"link": "/"
+				},
+				{
+					"ico": "fab fa-instagram",
+					"link": "/"
+				},
+				{
+					"ico": "fab fa-linkedin-in",
+					"link": "/"
+				}
+			]
+	}
+}

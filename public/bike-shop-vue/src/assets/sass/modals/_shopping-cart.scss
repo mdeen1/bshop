@@ -1,0 +1,14 @@
+/* ------------------------------------------------------------ *\
+	Shopping Cart Styles
+\* ------------------------------------------------------------ */
+
+.modal__shopping-cart {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 20vw;
+	height: 100vh;
+	background: $color-white;
+	z-index: 1000;
+}

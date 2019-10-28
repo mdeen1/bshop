@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------ *\
+	Global Footer Styles
+\* ------------------------------------------------------------ */
+.footer {
+	position: relative;
+	background: $color-black;
+	
+	.footer__inner {
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 50px;
+			left: 0;
+			right: 0;
+			display: block;
+			margin: 0 auto;
+			@include paddingcontainer-fluid;
+			height: 1px;
+			width: calc(100%);
+			background: $color-gray;
+		}
+	}
+}

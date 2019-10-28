@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	Main Styles of Modals
+\* ------------------------------------------------------------ */
+
+.modal-manager {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0,0,0, 0.7);
+}
+
+.modal h1 {
+  color: #fff;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  height: 32px;
+  width: 32px;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.modal__close-btn:before, .modal__close-btn:after {
+  content: ' ';
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  height: 33px;
+  width: 2px;
+  background: $color-black;
+}
+
+.modal__close-btn:before {
+  transform: rotate(45deg);
+}
+.modal__close-btn:after {
+  transform: rotate(-45deg);
+}

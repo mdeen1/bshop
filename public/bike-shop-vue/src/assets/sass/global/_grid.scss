@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------ *\
+	Custom Grid
+\* ------------------------------------------------------------ */
+.flex {
+	display: flex;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px -30px;
+	
+	&.justify-center {
+		justify-content: center;
+	}
+
+	&.justify-between {
+		justify-content: space-between;
+	}
+
+	&--no-wrap {
+		flex-wrap: nowrap;
+	}
+
+	&--reverse {
+		flex-direction: row-reverse;
+	}
+
+	&--non-scalable {
+		& > .col {
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+	}
+
+	.col {
+		max-width: 100%;
+		flex: 1 1 100%;
+		padding: 0 15px 30px;
+
+		&--flex {
+			display: flex;
+
+			& > * {
+				max-width: 100%;
+				flex: 1 1 100%;
+			}
+		}
+
+		&--flex-full {
+			max-width: 100%;
+			flex: 1 1 100%;
+		}
+
+		&--size-sidebar {
+			position: relative;
+			max-width: 380px;
+			flex: 0 0 380px;
+		}
+
+		&--auto {
+			max-width: auto;
+			flex: 0 0 auto;
+		}
+
+		&--1of2 {
+			max-width: 50%;
+			flex: 0 0 50%;
+		}
+
+		&--1of3 {
+			max-width: 33.33%;
+			flex: 0 0 33.33%;
+		}
+
+		&--1of4 {
+			max-width: 25%;
+			flex: 0 0 25%;
+		}
+
+		&--2of3 {
+			max-width: 66.66%;
+			flex: 0 0 66.66%;
+		}
+
+		&--size-project-card {
+			max-width: 340px;
+			flex: 0 0 340px;
+		}
+	}
+
+	&--no-padding {
+		margin: 0 -15px 30px;
+
+		&:last-child {
+			margin: 0 -15px 0;
+		}
+
+		& > .col {
+			padding: 0 15px 0;
+		}
+	}
+}

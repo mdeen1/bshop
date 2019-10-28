@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+	Global Mixins
+\* ------------------------------------------------------------ */
+@mixin paddingcontainer-fluid {
+	display: block;
+	margin: 0 auto;
+	max-width: 1240px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+@mixin xlPaddingcontainer-fluid {
+	display: block;
+	margin: 0 auto;
+	max-width: 1240px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
